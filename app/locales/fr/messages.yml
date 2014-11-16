@@ -1,0 +1,150 @@
+application:
+  name: 'Ledger Wallet'
+
+common:
+  bitcoin_acronym: 'BTC'
+
+onboarding:
+  device:
+    plug:
+      to_start: "Pour commencer, branchez votre Ledger Wallet au port USB de votre ordinateur"
+      i_lost_my_wallet: "J'ai perdu mon Ledger Wallet"
+    unplug:
+      unlock_my_wallet: "Dévérouiller mon portefeuille"
+      you_can_unplug: "Vous pouvez maintenant débrancher votre Ledger Wallet en toute sécurité"
+    pin:
+      enter_your_pin_code: "Entez votre code PIN pour dévérouiller votre portefeuille :"
+      i_lost_my_pin_code: "J'ai perdu mon code PIN"
+  management:
+    back: "RETOUR"
+    continue: "CONTINUER"
+    or: "OU"
+    done:
+      you_can_access_your_wallet: "Vous pouvez maintenant commencer à utiliser votre portefeuille"
+      configuration_is_complete: "Configuration terminée"
+      open_my_wallet: "Ouvrir mon portefeuille"
+      later_lock_my_wallet: "Plus tard, vérouiller mon portefeuille"
+    welcome:
+      new_wallet: "Nouveau portefeuille"
+      welcome_to_your_new_wallet: "Bienvenue dans votre nouveau Ledger Wallet !"
+      create_or_recover: "Souhaitez-vous créer un nouveau portefeuille ou en restaurer un existant ?"
+      use_as_new: "Créer mon nouveau portefeuille"
+      if_its_your_first_wallet: "S’il s’agit de votre premier Ledger Wallet"
+      recover_wallet: "Restaurer mon portefeuille existant"
+      if_you_lost_your_wallet: "Si vous avez bloqué ou perdu votre Ledger Wallet"
+    frozen:
+      wallet_is_frozen: "Portefeuille bloqué"
+      wrong_pin_codes: "Votre portefeuille s'est bloqué suite à 3 saisies incorrectes de votre code PIN, mais vos bitcoins restent en sécurité."
+      unfreeze_or_create: "Pour retrouver l'accès à vos comptes, vous devez débloquer votre portefeuille à l’aide de votre phrase de restauration."
+      unfreeze_my_wallet: "Débloquer mon portefeuille"
+      retreive_access: "Retrouvez l’accès à vos comptes à l’aide de votre phrase de restauration"
+      create_a_new_wallet: "Créer un nouveau portefeuille"
+      you_can_always_retreive_your_accounts: "Vos comptes et bitcoins actuels pourront être restaurés à tout moment sur un autre Ledger Wallet"
+    pin:
+      create_my_wallet: "Créer mon portefeuille"
+      recover_my_wallet: "Restaurer mon portefeuille"
+      unfreeze_my_wallet: "Débloquer mon portefeuille"
+      choose_your: "Choisissez votre"
+      choose_your_new: "Choisissez votre nouveau"
+      pin_code: "code PIN"
+      to_protect_your_wallet: "Il vous permet de protéger l’accès à votre portefeuille"
+      new_pin_code: "GÉNÉRER UN AUTRE CODE PIN"
+      auto: "CODE PIN AUTOMATIQUE"
+      manual: "CODE PIN MANUEL"
+      please_note: "Attention"
+      warning_weak_pin_codes: ", votre année de naissance et votre code de carte bancaire ne constituent pas des codes PIN sécurisés."
+    pin_confirmation:
+      confirm_your: "Confirmez votre"
+      pin_code: "code PIN"
+
+wallet:
+
+  defaults:
+    operations: &default-operations-translation
+      time: "DATE ET HEURE"
+      account_name: "NOM DU COMPTE"
+      bitcoin_address: "ADRESSE BITCOIN"
+      amount: "MONTANT"
+      sender: "depuis"
+      receiver: "vers"
+      balance: "SOLDE"
+
+  top_menu:
+    balance: 'SOLDE'
+    items:
+      dashboard: 'SYNTHÈSE'
+      send: 'ENVOYER'
+      receive: 'RECEVOIR'
+      accounts: 'COMPTES'
+      signout: 'VERROUILLER'
+
+  dashboard:
+
+    index:
+      accounts:
+        title: "APERÇU DES COMPTES"
+        action: "GÉRER LES COMPTES"
+        account_name: "NOM DU COMPTE"
+        account_type: "TYPE"
+        account_balance: "SOLDE"
+
+      operations:
+        <<: *default-operations-translation
+        title: "DERNIÈRES OPÉRATIONS"
+        action: "VOIR TOUTES LES OPÉRATIONS"
+
+  operations:
+
+    detail:
+      title: "DÉTAIL DE L'OPÉRATION"
+      amount: "Montant"
+      time: "Date et heure"
+      status: "État"
+      sender: "Depuis"
+      receiver: "Vers"
+      identifier: "Identifiant"
+      send_by_email: "ENVOYER PAR EMAIL"
+      print: "IMPRIMER"
+      close: "FERMER"
+
+    index:
+       <<: *default-operations-translation
+       title: "TOUTES LES OPÉRATIONS"
+       title_with_account_name: 'TOUTES LES OPÉRATIONS DE %s'
+       filter_sort_desc: "TRI DÉCROISSANT"
+       filter_sort_asc: "TRI CROISSANT"
+
+  accounts:
+    account:
+      detail:
+        action: "PARAMÈTRES DU COMPTE"
+        balance: "SOLDE"
+        balance_in_progress: "DONT NON CONFIRMÉ"
+        actions: "ACTIONS"
+        receive: "RECEVOIR"
+        send: "ENVOYER"
+
+      operations:
+        <<: *default-operations-translation
+        title: "DERNIÈRES OPÉRATIONS"
+        action: "VOIR TOUTES LES OPÉRATIONS"
+
+      receive:
+        title: "RECEVOIR DES BITCOINS"
+        amount: "MONTANT (OPTIONNEL)"
+        receiver_account: "COMPTE À CRÉDITER"
+        receiver_address: "ADDRESSE DE RÉCEPTION"
+        qr_code_explanation: "Code QR à scanner par la personne <br /> qui souhaite vous envoyer des bitcoins"
+        send_by_email: "ENVOYER PAR EMAIL"
+        print: "IMPRIMER"
+        close: "FERMER"
+
+      send:
+        title: "ENVOYER DES BITCOINS"
+        amount: "MONTANT"
+        amount_placeholder: "montant"
+        sender_account: "COMPTE À DÉBITER"
+        receiver_address: "ADRESSE À CRÉDITER"
+        receiver_address_placeholder: "adresse bitcoin"
+        transaction_fees: "FRAIS DE TRANSACTION"
+        transaction_fees_text: "0.0001 BTC (virement effectué sous 10 minutes)"

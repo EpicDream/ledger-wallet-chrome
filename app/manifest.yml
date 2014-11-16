@@ -1,0 +1,44 @@
+name: "__MSG_application_name__"
+version: "0.1"
+manifest_version: 2
+minimum_chrome_version: "38"
+default_locale: "en"
+
+app:
+  background:
+    scripts:
+      - "src/background.js"
+
+permissions:
+  - "*://*/*"
+  - "storage"
+  - "usb"
+  - "hid"
+  -
+    usbDevices:
+      -
+        vendorId: 9601
+        productId: 7036
+      -
+        vendorId: 9601
+        productId: 11132
+
+commands:
+  reload-page:
+    suggested_key:
+      default: "Ctrl+R"
+      mac: "Command+R"
+    description: "Reload the current page"
+
+  reload-application:
+    suggested_key:
+      default: "Ctrl+Shift+R"
+      mac: "Command+Shift+R"
+    description: "Reload the application"
+
+icons:
+  16: "assets/images/icon-16.png"
+  48: "assets/images/icon-32.png"
+  48: "assets/images/icon-48.png"
+  48: "assets/images/icon-64.png"
+  128: "assets/images/icon-128.png"

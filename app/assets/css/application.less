@@ -1,0 +1,109 @@
+@import "constants";
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "dialog";
+@import "dropdown";
+@import "../../public/font-awesome/css/font-awesome.min.css";
+
+// containers classes
+.main-container {
+  background-color: @color-background-color;
+  .fullsize
+}
+
+// buttons
+.rounded-button(@color) {
+  font-size: @font-size-large;
+  text-transform: uppercase;
+  border-radius: @border-radius-default-value;
+  padding: 9px 14px;
+  color: @color-white;
+  background-color: @color;
+  display: inline-block;
+  letter-spacing: -0.5px;
+
+  a& {
+    text-decoration: none;
+  }
+
+  a&:hover {
+    background-color: darken(@color, @color-default-darken-value);
+  }
+}
+.action-rounded-button {
+  .rounded-button(@color-action-green);
+}
+.cancel-rounded-button {
+  .rounded-button(@color-light-grey);
+}
+.important-rounded-button {
+  .rounded-button(@color-invalid-red);
+}
+
+// texts
+.uppercase-action {
+  font-size: @font-size-small;
+  color: @color-action-purple;
+
+  a& {
+    text-decoration: none;
+
+    &:hover {
+      color: darken(@color-action-purple, 15%)
+    }
+  }
+}
+
+.action-bar {
+  display: flex;
+
+  > a {
+    margin-right: @metrics-very-small-padding;
+  }
+
+  > a:last-child {
+    margin-right: 0px;
+  }
+
+  .cancel-rounded-button {
+    margin-left: auto;
+  }
+}
+
+.dialog-actions-bar {
+ .action-bar;
+  margin-top: @metrics-medium-padding;
+}
+
+[data-href] {
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+.tooltip-holder {
+
+  &:hover {
+    cursor: help;
+  }
+
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.tooltipster-light {
+  border-radius: 5px;
+  background-color: @color-background-color;
+  border-radius: 5px;
+  padding: @metrics-small-padding;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+.tooltipster-light .tooltipster-content {
+  font-size: @font-size-medium;
+  line-height: @font-size-medium + 2px;
+}

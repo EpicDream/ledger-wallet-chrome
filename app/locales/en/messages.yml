@@ -1,0 +1,150 @@
+application:
+  name: 'Ledger Wallet'
+
+common:
+  bitcoin_acronym: 'BTC'
+
+onboarding:
+  device:
+    plug:
+      to_start: "To begin, connect your Ledger Wallet into the USB port of your computer"
+      i_lost_my_wallet: "I lost my Ledger Wallet"
+    unplug:
+      unlock_my_wallet: "Unlock my wallet"
+      you_can_unplug: "You can now safely disconnect your Ledger Wallet"
+    pin:
+      enter_your_pin_code: "Enter you PIN code to unlock your wallet:"
+      i_lost_my_pin_code: "I lost my PIN code"
+  management:
+    back: "BACK"
+    continue: "CONTINUE"
+    or: "OR"
+    done:
+      you_can_access_your_wallet: "You can now start using your wallet"
+      configuration_is_complete: "Configuration is complete"
+      open_my_wallet: "Open my wallet"
+      later_lock_my_wallet: "Later, lock my wallet"
+    welcome:
+      new_wallet: "New wallet"
+      welcome_to_your_new_wallet: "Welcome to your new Ledger Wallet!"
+      create_or_recover: "Would you like to create a new wallet or restore an existing one?"
+      use_as_new: "Create my new wallet"
+      if_its_your_first_wallet: "If you just bought your first Ledger Wallet"
+      recover_wallet: "Recover my existing wallet"
+      if_you_lost_your_wallet: "If you froze or lost your Ledger Wallet"
+    frozen:
+      wallet_is_frozen: "Your wallet is frozen"
+      wrong_pin_codes: "Your wallet has frozen due to 3 incorrect PIN entries, but your bitcoins remain safe."
+      unfreeze_or_create: "To regain access to your accounts, you must unfreeze your wallet with your recovery phrase."
+      unfreeze_my_wallet: "Unfreeze my wallet"
+      retreive_access: "Regain access to your accounts using your recovery phrase"
+      create_a_new_wallet: "Create a new wallet"
+      you_can_always_retreive_your_accounts: "Your current bitcoins and accounts remain fully restorable at any time to another Ledger Wallet"
+    pin:
+      create_my_wallet: "Create my wallet"
+      recover_my_wallet: "Recover my wallet"
+      unfreeze_my_wallet: "Unfreeze my wallet"
+      choose_your: "Choose your"
+      choose_your_new: "Choose your new"
+      pin_code: "PIN code"
+      to_protect_your_wallet: "It allows you to secure the access of your wallet"
+      new_pin_code: "GENERATE ANOTHER PIN CODE"
+      auto: "AUTOMATIC PIN CODE"
+      manual: "MANUAL PIN CODE"
+      please_note: "Please note"
+      warning_weak_pin_codes: ", your birth year or your debit/credit card pin are not secure PIN codes."
+    pin_confirmation:
+      confirm_your: "Confirm your"
+      pin_code: "PIN code"
+
+wallet:
+
+  defaults:
+    operations: &default-operations-translation
+      time: "TIME"
+      sender: "from"
+      receiver: "to"
+      account_name: "ACCOUNT NAME"
+      bitcoin_address: "BITCOIN ADDRESS"
+      amount: "AMOUNT"
+      balance: "BALANCE"
+
+  top_menu:
+    balance: 'SOLDE'
+    items:
+      dashboard: 'DASHBOARD'
+      send: 'SEND'
+      receive: 'RECEIVE'
+      accounts: 'ACCOUNTS'
+      signout: 'LOCK'
+
+  dashboard:
+
+    index:
+      accounts:
+        title: "ACCOUNTS PREVIEW"
+        action: "MANAGE ACCOUNTS"
+        account_name: "ACCOUNT NAME"
+        account_type: "TYPE"
+        account_balance: "BALANCE"
+
+      operations:
+        <<: *default-operations-translation
+        title: "LAST OPERATIONS"
+        action: "SEE ALL OPERATIONS"
+
+  operations:
+    detail:
+      title: "OPERATION DETAIL"
+      amount: "Amount"
+      time: "Time"
+      status: "Status"
+      sender: "From"
+      receiver: "To"
+      identifier: "Transaction identifier"
+      send_by_email: "SEND BY EMAIL"
+      print: "PRINT"
+      close: "CLOSE"
+
+    index:
+      <<: *default-operations-translation
+      title: "ALL OPERATIONS"
+      title_with_account_name: 'ALL %s OPERATIONS'
+      filter_sort_desc: "DESCENDANT SORTNG"
+      filter_sort_asc: "ASCENDANT SORTING"
+
+  accounts:
+
+    account:
+      detail:
+        action: "ACCOUNT SETTINGS"
+        balance: "BALANCE"
+        balance_in_progress: "INCLUDING UNCONFIRMED"
+        actions: "ACTIONS"
+        receive: "RECEIVE"
+        send: "SEND"
+
+      operations:
+        <<: *default-operations-translation
+        title: "LAST OPERATIONS"
+        action: "SEE ALL OPERATIONS"
+
+      receive:
+        title: "RECEIVE BITCOINS"
+        amount: "AMOUNT (OPTIONAL)"
+        receiver_account: "RECIPIENT ACCOUNT"
+        receiver_address: "RECIPTIENT ADDRESS"
+        qr_code_explanation: "This QR code can be scanned <br/> by the person who want to send you bitcoins"
+        send_by_email: "SEND BY EMAIL"
+        print: "PRINT"
+        close: "CLOSE"
+
+      send:
+        title: "SEND BITCOINS"
+        amount: "AMOUNT"
+        amount_placeholder: "amount"
+        sender_account: "DEBIT ACCOUNT"
+        receiver_address: "RECIPIENT ADDRESS"
+        receiver_address: "recipient address"
+        transaction_fees: "TRANSACTION FEES"
+        transaction_fees_text: "0.0001 BTC (transfer made under 10 minutes)"
